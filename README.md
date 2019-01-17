@@ -18,3 +18,6 @@ http://ec2-3-82-42-247.compute-1.amazonaws.com:8080/h2-console
 
 Для подключения использовать
 JDBC URL: jdbc:h2:mem:testdb
+
+Выполнить сборку и запуск сервиса можно с помощью команды (необходимо наличие JDK 8):
+./gradlew bootRun
