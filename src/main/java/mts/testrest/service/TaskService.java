@@ -2,13 +2,13 @@ package mts.testrest.service;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
-import javax.transaction.Transactional;
 import mts.testrest.model.Task;
 import mts.testrest.persistance.TaskRepository;
 import mts.testrest.rest.InvalidUuidException;
 import mts.testrest.rest.TaskNotFoundException;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @Service
@@ -39,6 +39,7 @@ public class TaskService {
         setStatus(task, Task.Status.FINISHED);
     }
 
+    @Transactional(readOnly=true)
     public Task getTask(@PathVariable String id) {
         validateUuid(id);
         return taskRepository.findById(id).orElseThrow(() -> new TaskNotFoundException(id));
