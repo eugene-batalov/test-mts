@@ -16,5 +16,5 @@ http://ec2-3-82-42-247.compute-1.amazonaws.com:8080/task/17c79c46-78a4-4576-9192
 Использована in-memory БД H2, консоль доступна по адресу
 http://ec2-3-82-42-247.compute-1.amazonaws.com:8080/h2-console
 
-Для подключения поменять
+Для подключения использовать
 JDBC URL: jdbc:h2:mem:testdb
