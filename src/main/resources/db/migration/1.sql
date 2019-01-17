@@ -1,5 +1,0 @@
-CREATE TABLE TASK (
-id VARCHAR(36) PRIMARY KEY,
-status VARCHAR(8),
-timestamp TIMESTAMP
-);
